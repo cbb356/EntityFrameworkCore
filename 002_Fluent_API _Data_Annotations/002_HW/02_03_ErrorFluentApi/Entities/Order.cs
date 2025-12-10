@@ -11,16 +11,12 @@ namespace ErrorFluentApi.Entities
         public Guid OrderId { get; set; }
         public int OrderAlterId { get; set; }
 
-        [MaxLength(50)]
         public string Name { get; set; } = null!;
 
-        [Column(TypeName = "date")]
         public DateTime Create { get; set; }
 
-        [Column(TypeName = "date")] 
         public DateTime? Update { get; set; }
 
-        [Column(TypeName = "nvarchar(400)")] 
         public string? Description { get; set; }
 
         public override string ToString()

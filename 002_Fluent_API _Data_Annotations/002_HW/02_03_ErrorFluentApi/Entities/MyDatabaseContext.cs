@@ -23,9 +23,31 @@ namespace ErrorFluentApi.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Add composite key
+            // Add composite key    
             modelBuilder.Entity<Order>()
                 .HasKey(o => new { o.OrderId, o.OrderAlterId });
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.OrderAlterId)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Create)
+                .HasColumnType("date")
+                .IsRequired();
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Update)
+                .HasColumnType("date");
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Description)
+                .HasMaxLength(400);
 
             modelBuilder.Ignore<Error>();
         }
