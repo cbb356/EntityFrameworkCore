@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DataAnnotations.Entities
+namespace ErrorFluentApi.Entities
 {
     internal class Order
     {
         public Guid OrderId { get; set; }
+        public int OrderAlterId { get; set; }
 
         [MaxLength(50)]
         public string Name { get; set; } = null!;

@@ -17,9 +17,10 @@ namespace DataAnnotations
             using (var db = new MyDatabaseContext())
             {
                 Console.WriteLine("Database created successfully");
-                // Delay.
-                Console.ReadKey();
             }
+
+            // Delay.
+            Console.ReadKey();
         }
     }
 }

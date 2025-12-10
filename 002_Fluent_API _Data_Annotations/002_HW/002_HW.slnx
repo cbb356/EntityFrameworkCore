@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="01_DataAnnotations/01_DataAnnotations.csproj" />
+  <Project Path="02_03_ErrorFluentApi/02_03_ErrorFluentApi.csproj" Id="9459b942-6a1a-4a8a-b3b1-7a187f0c7990" />
 </Solution>
